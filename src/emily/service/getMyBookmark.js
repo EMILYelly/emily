@@ -8,11 +8,11 @@ import axios from "axios";
 const useGetMyBookmark = () => {
   const adress = getApiAdress();
   return async () => {
-    const axiosResult = axios({
+    const axiosResult = await axios({
       method: "get",
       url: `${adress}/${user_id}/bookmark`,
     });
-    const bookMarks = (await axiosResult).data;
+    const bookMarks = axiosResult.data;
     return bookMarks;
   };
 };

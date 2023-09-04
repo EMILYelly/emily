@@ -8,11 +8,11 @@ import axios from "axios";
 const useGetMyPosts = () => {
   const adress = getApiAdress();
   return async () => {
-    const axiosResult = axios({
+    const axiosResult = await axios({
       method: "get",
       url: `${adress}/${user_id}/posts`,
     });
-    const posts = (await axiosResult).data;
+    const posts = axiosResult.data;
     return posts;
   };
 };
