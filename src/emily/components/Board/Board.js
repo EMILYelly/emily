@@ -2,19 +2,20 @@ import React from "react";
 import Card from "../Card/card";
 import "./board.css";
 
-const Board = (props) => {
-  const data = [...props.info];
+const Board = ({ test, title }) => {
+  // const data = [...props.info];
   return (
     <div>
       <div className="board-container">
-        <div className="board-title">{props.title}</div>
-        {data.map((a) => {
+        <div className="board-title">{title}</div>
+        {test.map((item) => {
           return (
             <Card
-              id={a.id}
-              title={a.title}
-              content={a.content}
-              image={a.image}
+              key={item.id}
+              id={item.id}
+              title={item.title}
+              content={item.content}
+              image={item.image}
             />
           );
         })}

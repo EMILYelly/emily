@@ -1,15 +1,15 @@
 import React from "react";
 import "./card.css";
-const Card = (props) => {
+const Card = ({ id, title, content, image }) => {
   return (
     <div>
       <div className="container">
-        <div className="id">{props.id}</div>
+        <div className="id">{id}</div>
         <div className="box">
-          <div className="box-title">{props.title}</div>
-          <div className="box-content">{props.content}</div>
+          <div className="box-title">{title}</div>
+          <div className="box-content">{content}</div>
           <div className="box-img">
-            <img src={props.image} alt="이미지 url"></img>
+            <img src={image} alt="이미지 url"></img>
           </div>
         </div>
       </div>
