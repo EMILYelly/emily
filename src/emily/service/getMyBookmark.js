@@ -5,7 +5,7 @@ import React from "react";
 import getApiAdress from "./getApiAdress";
 import axios from "axios";
 
-const getMyBookmark = () => {
+const useGetMyBookmark = () => {
   const adress = getApiAdress();
   return async () => {
     const axiosResult = axios({
@@ -17,4 +17,4 @@ const getMyBookmark = () => {
   };
 };
 
-export default getMyBookmark;
+export default useGetMyBookmark;
